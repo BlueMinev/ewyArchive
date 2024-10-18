@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const port = 3000;
 const bodyParser = require('body-parser'); // body parser enables us to read data from a request body 
-const db = require('/js/db.js'); // exposes the SQLLite db so we can run queries against it
+const db = require('js/db.js'); // exposes the SQLLite db so we can run queries against it
 
 // tells express to use the body parser
 app.use(bodyParser.urlencoded({extended:false}));
