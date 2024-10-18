@@ -1,0 +1,23 @@
+{
+  "name": "ewyarchive",
+  "version": "1.0.0",
+  "description": "ewy archive api and page",
+  "main": "api.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BlueMinev/ewyArchive.git"
+  },
+  "author": "Blue Minev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BlueMinev/ewyArchive/issues"
+  },
+  "homepage": "https://github.com/BlueMinev/ewyArchive#readme",
+  "dependencies": {
+    "express": "^4.21.1",
+    "sqlite3": "^5.1.7"
+  }
+}

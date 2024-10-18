@@ -1,0 +1,92 @@
+/*sections------------------------------------------------------------------- */
+body {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+#search {
+    grid-area: search;
+    display: block;
+    margin-bottom: 30px;
+}
+
+input[type=text] {
+    border: 2px solid grey;
+    width:50%;
+    margin: 3px;
+  }
+
+  input[type=text]:focus {
+    border: 2px solid black;
+    border-radius: 4px;
+    
+  }
+
+  input[type=submit]{
+    border: 2px solid grey;
+    padding: 2px;
+  }
+
+#head {
+    grid-area: head;
+}
+
+.title {
+    grid-area: title;
+}
+
+.date {
+    grid-area: date;
+}
+
+.image {
+    grid-area: imageRes;
+    align-self: flex-end;
+    width: 75%;
+}
+
+.desc {
+    grid-area: description;
+}
+
+
+#error {
+    grid-area: error;
+    display: none;
+    text-align: center;
+    padding-top: 10em;
+}
+
+#loading {
+    grid-area: loading;
+    display: none;
+    text-align: center;
+    padding-top: 9em;
+}
+
+.card {
+    padding: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border: 2px solid lightgray;
+        border-radius: 3px;
+}
+
+#result {
+    display: none;
+}
+
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (min-width: 550px) {
+    .card {
+        padding: 25px;
+        margin: 5px;
+        
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        grid-template-areas:
+            "title imageRes"
+            "date imageRes"
+            "description imageRes"
+    }
+}

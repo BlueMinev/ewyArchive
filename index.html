@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/normailse.css" />
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <script src="js/index.js"></script>
+    <title>Ewy Archive</title>
+  </head>
+
+  <body id="wrapper">
+    <h1 id="head">Ewy Archive</h1>
+    <div id="search">
+      <form>
+        <label for="searchbar" id="label"
+          >Search for things in ewy history!:</label
+        >
+        <br />
+        <input type="text" id="searchbar" placeholder="Search for an item!" />
+
+        <input type="submit" id="submitbtn" value="Search" />
+      </form>
+    </div>
+    <div id="loading">
+      <img src="/EwyArchive/resources/loading.gif" alt="loading" />
+    </div>
+    <div id="error">
+      <p>Uh oh! Something went wrong! There might not be any items associated with your search. Check your spelling and try again!</p>
+      <p><a id="reset_error" href="#">Try again</a></p>
+    </div>
+    <div id="result"></div>
+  </body>
+</html>
