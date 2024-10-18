@@ -109,35 +109,4 @@ async function getComments(req) {
     return {status, data};
     }
     
-    async function postComments(req) {
-        let status = 500, data = null;
-        try {
-        const oid = req.body.oid;
-        const name = req.body.name;
-        const comment = req.body.comment;
-        if(oid && name && comment
-            && oid.length > 0 && oid.length <= 32
-            && oid.match(/^[a-z0-9]+$/i)
-            && name.length > 0 && name.length <= 64
-            && comment.length > 0 ){
-            // wrap in promise to allow for sequential code flow
-            await new Promise((resolve, reject) => {
-            const sql = 'INSERT INTO comments (oid, name, comment)VALUES (?, ?, ?)';
-            // use old style function syntax to access lastID,
-            // see https://github.com/TryGhost/node-sqlite3/wiki/API
-            db.run(sql, [oid, name, comment], function (err, result) {
-            if(!err) {
-            status = 201;
-            data = {'id': this.lastID };
-            }
-            resolve();
-            });
-            });
-            } else {
-            status = 400;
-            }
-            } catch(e) {
-            console.error(e);
-            }
-            return {status, data};
-            }
+module.exports = app;
